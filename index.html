@@ -76,29 +76,29 @@
     .transition-card:hover {
       transform: translateY(-4px);
     }
-  </style>
+    @media (max-width: 767px) {\n      header .max-w-7xl > .flex { min-width: 0; }\n      header .max-w-7xl > .flex > div:first-child { max-width: 56%; }\n      header .max-w-7xl > .flex > div:last-child { min-width: 0; }\n      header #auth-logged-in, header #auth-guest { gap: 0.25rem; }\n      header #auth-logged-in > button, header #auth-guest > button { padding-left: .5rem; padding-right: .5rem; }\n      header #auth-guest > button:first-child { display: none; }\n    }\n  </style>
 </head>
 <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
 
   <!-- Header / Navigation Bar -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between min-h-20 gap-3 py-2">
         <!-- Brand Logo: AGRO LOJA -->
-        <div class="flex items-center gap-3 cursor-pointer" onclick="switchView('catalog')">
-          <div class="w-13 h-13 p-1 rounded-2xl bg-white border border-slate-100 shadow-md shadow-emerald-700/10 flex items-center justify-center flex-shrink-0">
-            <img src="./agroloja-logo.svg" alt="Agro Loja - Red Productiva" class="w-12 h-12 object-contain" />
+        <div class="flex items-center gap-2 sm:gap-3 min-w-0 cursor-pointer" onclick="switchView('catalog')">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 p-1 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center flex-shrink-0">
+            <img src="./agroloja-logo.svg" alt="Agro Loja - Red Productiva" class="w-full h-full object-contain" />
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-2xl font-black tracking-tight leading-none text-tierra-800">
+              <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-tierra-800 whitespace-nowrap">
                 Agro<span class="text-brand-600">Loja</span>
               </span>
-              <span class="px-2 py-0.5 text-[9px] font-extrabold tracking-wider uppercase bg-emerald-100 text-emerald-800 rounded-full border border-emerald-200">
+              <span class="hidden lg:inline-flex px-2 py-0.5 text-[9px] font-extrabold tracking-wider uppercase bg-emerald-100 text-emerald-800 rounded-full border border-emerald-200">
                 500 Fincas
               </span>
             </div>
-            <p class="text-[11px] text-tierra-600 font-bold tracking-tight">Red Productiva · Del campo directo a tu mesa</p>
+            <p class="text-[10px] sm:text-[11px] text-tierra-600 font-bold tracking-tight leading-snug">Red Productiva <span class="hidden sm:inline">· Del campo directo a tu mesa</span></p>
           </div>
         </div>
 
@@ -910,18 +910,11 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-3">
           <div class="w-11 h-11 p-1 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center flex-shrink-0">
-            <svg class="w-9 h-9" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="98" cy="56" r="24" fill="#F5A623"/>
-              <path d="M78 88C95 72 120 74 135 88C110 92 88 95 78 88Z" fill="#58A825"/>
-              <path d="M82 108C100 95 125 102 146 100C132 118 108 126 88 124C78 122 80 115 82 108Z" fill="#0084C7"/>
-              <path d="M38 88C42 102 54 130 84 132C76 120 72 104 60 92C48 80 40 84 38 88Z" fill="#733816"/>
-              <path d="M38 78C32 50 56 22 86 18C74 38 80 58 64 74C52 86 42 86 38 78Z" fill="#288936"/>
-              <path d="M50 78C62 64 88 64 104 74C86 86 68 90 50 78Z" fill="#1C6C26"/>
-            </svg>
+            <img src="./agroloja-logo.svg" alt="Logo Agro Loja" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <span class="font-black text-tierra-900 text-base">Agro<span class="text-brand-600">Loja</span></span>
-            <p class="text-xs text-slate-500">Tienda de productos frescos • 500 fincas campesinas asociadas.</p>
+            <p class="text-xs text-slate-500">Red Productiva · Del campo directo a tu mesa</p>
           </div>
         </div>
 
@@ -933,7 +926,7 @@
         </div>
 
         <div class="text-xs text-slate-400 text-center md:text-right">
-          © 2026 Agro Loja. Tienda de productos frescos y comercio justo.
+          © 2026 Agro Loja · Red Productiva.
         </div>
       </div>
     </div>
