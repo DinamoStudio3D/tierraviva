@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tierra Viva - Tienda de Productos Frescos | Red de 500 Fincas</title>
+  <title>Agro Loja | Red Productiva - Del campo directo a tu mesa</title>
+  <meta name="description" content="Agro Loja - Red Productiva. Del campo directo a tu mesa.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +83,7 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Brand Logo: TIERRA VIVA -->
+        <!-- Brand Logo: AGRO LOJA -->
         <div class="flex items-center gap-3 cursor-pointer" onclick="switchView('catalog')">
           <div class="w-13 h-13 p-1 rounded-2xl bg-white border border-slate-100 shadow-md shadow-emerald-700/10 flex items-center justify-center flex-shrink-0">
             <svg class="w-11 h-11" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,13 +102,13 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="text-2xl font-black tracking-tight leading-none text-tierra-800">
-                TIERRA<span class="text-brand-600">VIVA</span>
+                Agro<span class="text-brand-600">Loja</span>
               </span>
               <span class="px-2 py-0.5 text-[9px] font-extrabold tracking-wider uppercase bg-emerald-100 text-emerald-800 rounded-full border border-emerald-200">
                 500 Fincas
               </span>
             </div>
-            <p class="text-[11px] text-tierra-600 font-bold tracking-tight">Tienda de productos frescos</p>
+            <p class="text-[11px] text-tierra-600 font-bold tracking-tight">Red Productiva · Del campo directo a tu mesa</p>
           </div>
         </div>
 
@@ -652,7 +653,7 @@
             <i id="auth-modal-icon" class="fa-solid fa-id-card-clip"></i>
           </div>
           <div>
-            <h3 id="auth-modal-title" class="text-lg font-black">Portal de Productores Tierra Viva</h3>
+            <h3 id="auth-modal-title" class="text-lg font-black">Portal de Productores Agro Loja</h3>
             <p class="text-xs text-emerald-200">Red Unida de 500 Fincas Productoras</p>
           </div>
         </div>
@@ -929,7 +930,7 @@
             </svg>
           </div>
           <div>
-            <span class="font-black text-tierra-900 text-base">TIERRA<span class="text-brand-600">VIVA</span></span>
+            <span class="font-black text-tierra-900 text-base">Agro<span class="text-brand-600">Loja</span></span>
             <p class="text-xs text-slate-500">Tienda de productos frescos • 500 fincas campesinas asociadas.</p>
           </div>
         </div>
@@ -942,7 +943,7 @@
         </div>
 
         <div class="text-xs text-slate-400 text-center md:text-right">
-          © 2026 Tierra Viva. Tienda de productos frescos y comercio justo.
+          © 2026 Agro Loja. Tienda de productos frescos y comercio justo.
         </div>
       </div>
     </div>
@@ -1165,7 +1166,7 @@
           const formData = new FormData();
           formData.append('image', compressed.blob, 'cosecha.jpg');
           formData.append('type', 'file');
-          formData.append('title', 'Tierra Viva - Cosecha');
+          formData.append('title', 'Agro Loja - Cosecha');
 
           const response = await fetch('https://api.imgur.com/3/image', {
             method: 'POST',
@@ -1253,7 +1254,7 @@
         btnLogin.className = "flex-1 py-2 text-xs font-bold rounded-xl bg-white text-emerald-900 shadow-sm transition";
         tabReg.classList.add('hidden');
         tabLogin.classList.remove('hidden');
-        document.getElementById('auth-modal-title').textContent = "Portal de Productores Tierra Viva";
+        document.getElementById('auth-modal-title').textContent = "Portal de Productores Agro Loja";
         document.getElementById('auth-modal-icon').className = "fa-solid fa-id-card-clip";
       }
     }
@@ -1318,7 +1319,7 @@
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 24px sans-serif';
-        ctx.fillText('TIERRA VIVA', 30, 140);
+        ctx.fillText('AGRO LOJA', 30, 140);
         ctx.font = '14px sans-serif';
         ctx.fillStyle = '#dcfce7';
         ctx.fillText('Prueba de Conexión Imgur', 30, 170);
@@ -1433,7 +1434,7 @@
         avatar: uploadedAvatarBase64,
         phone: phone,
         certifications: ["En Transición Agroecológica", "Socio Nuevo"],
-        bio: `Finca productora registrada en Tierra Viva, dedicada a ${specialty.toLowerCase()} en ${location}.`
+        bio: `Finca productora registrada en Agro Loja, dedicada a ${specialty.toLowerCase()} en ${location}.`
       };
 
       PRODUCERS.unshift(newProducer);
@@ -1447,7 +1448,7 @@
       renderFarmsDirectory();
       closeModal('modal-login');
       document.getElementById('tab-content-register').reset();
-      showToast('¡Finca Registrada con Éxito!', `Bienvenido a la red Tierra Viva, ${name}. Matrícula: ${newId}`);
+      showToast('¡Finca Registrada con Éxito!', `Bienvenido a la red Agro Loja, ${name}. Matrícula: ${newId}`);
       switchView('dashboard');
     }
 
@@ -1523,7 +1524,7 @@
       document.getElementById('auth-guest').classList.add('hidden');
       document.getElementById('current-user-avatar').src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&auto=format&fit=crop&q=80";
       document.getElementById('current-user-name').textContent = "Administrador Cooperativa";
-      document.getElementById('current-user-farm').textContent = "Directiva Tierra Viva";
+      document.getElementById('current-user-farm').textContent = "Directiva Agro Loja";
 
       showToast('Modo Administrador', 'Has iniciado sesión con privilegios de gestión de los 500 socios.');
       switchView('admin');
@@ -1954,7 +1955,7 @@
           status: 'active'
         };
         products.unshift(newProduct);
-        showToast('¡Cosecha Publicada!', `Tu producto ya es visible en la tienda Tierra Viva.`);
+        showToast('¡Cosecha Publicada!', `Tu producto ya es visible en la tienda Agro Loja.`);
       }
 
       closeModal('modal-product');
@@ -2076,7 +2077,7 @@
 
     function contactProducer(phone, productTitle) {
       const cleanPhone = phone.replace(/[^0-9]/g, '');
-      const msg = encodeURIComponent(`¡Hola! Vi su publicación de "${productTitle}" en la tienda de productos frescos Tierra Viva y me gustaría coordinar un pedido.`);
+      const msg = encodeURIComponent(`¡Hola! Vi su publicación de "${productTitle}" en la tienda de productos frescos Agro Loja y me gustaría coordinar un pedido.`);
       window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
     }
 
